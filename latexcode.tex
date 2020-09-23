@@ -207,20 +207,22 @@ From \eqref{2} $\vec{V}$ can be rewritten as
 \end{align}
 \eqref{1} can be now rewritten as
 \begin{align}
-25\left[\vec{x}^T\myvec{\frac{4}{5}&\frac{-3}{5}\\ \frac{3}{5}&\frac{4}{5}}\myvec{2&0\\0&1}\myvec{\frac{4}{5}&\frac{3}{5}\\ \frac{-3}{5}&\frac{4}{5}}\vec{x}\right]=75
-\end{align}
-Let us replace the variable $\vec{x}$ with a variable $\vec{y}$
-\begin{align}
-  \vec{y}^T\myvec{\frac{4}{5}&\frac{-3}{5}\\ \frac{3}{5}&\frac{4}{5}}\myvec{2&0\\0&1}\myvec{\frac{4}{5}&\frac{3}{5}\\ \frac{-3}{5}&\frac{4}{5}}\vec{y}= 3 \\
-  \left[\myvec{\frac{4}{5}&\frac{3}{5}\\ \frac{-3}{5}&\frac{4}{5}}\vec{y}\right]^T\myvec{2&0\\0&1}\left[\myvec{\frac{4}{5}&\frac{3}{5}\\ \frac{-3}{5}&\frac{4}{5}}\vec{y}\right]= 3\label{3}
+25\left[\vec{x}^T\myvec{\frac{4}{5}&\frac{-3}{5}\\ \frac{3}{5}&\frac{4}{5}}\myvec{2&0\\0&1}\myvec{\frac{4}{5}&\frac{3}{5}\\ \frac{-3}{5}&\frac{4}{5}}\vec{x}\right]=75\\
+  \left[\myvec{\frac{4}{5}&\frac{3}{5}\\ \frac{-3}{5}&\frac{4}{5}}\vec{x}\right]^T\myvec{2&0\\0&1}\left[\myvec{\frac{4}{5}&\frac{3}{5}\\ \frac{-3}{5}&\frac{4}{5}}\vec{x}\right]= 3\label{3}
 \end{align}
  Consider the rotation transformation 
 \begin{align}
-  \vec{x}=\myvec{\frac{4}{5}&\frac{3}{5}\\ \frac{-3}{5}&\frac{4}{5}}\vec{y}\label{4}
+  \vec{x}=\vec{P}\vec{y}\\
+  \implies \vec{x}=\myvec{\frac{4}{5}&\frac{-3}{5}\\ \frac{3}{5}&\frac{4}{5}}\vec{y}\label{4}\\
+  \vec{P}^{-1}\vec{x}=\vec{P}^{-1}\vec{P}\vec{y}\\
+  \implies \vec{y}= \vec{P}^{-1}\vec{x}\\
+  \text{But, }\vec{P}^{-1}=\vec{P}^T\\
+  \implies \vec{y}=\myvec{\frac{4}{5}&\frac{3}{5}\\ \frac{-3}{5}&\frac{4}{5}}\vec{x}
 \end{align}
+
 Using \eqref{4} in \eqref{3}, the ellipse equation can be rewritten as
 \begin{align}
-     \vec{x}^T\myvec{2&0\\0&1}\vec{x}=3
+     \vec{y}^T\myvec{2&0\\0&1}\vec{y}=3
 \end{align}
 \begin{figure}[!ht]
 \centering
